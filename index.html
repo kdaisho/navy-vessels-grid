@@ -7,144 +7,45 @@
     <title>Royal Canadian Navy</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="root">
+<body class="root" ng-app="navy">
     <header>
-        <!-- <h1 class="title">Royal Canadian NAVY</h1> -->
         <h1 class="title">
             <sup>Royal Canadian</sup>
             NAVY
         </h1>
         <img class="header-flag" src="images/rcn-flag.png" alt="Royal Canadian Navy flag">
     </header>
-    <div class="wrapper">
+    <div class="wrapper" ng-controller="asideCtrl">
         <aside class="left">
             <h2 class="aside-title narrow">Vessels in service</h2>
-            <article id="spec_01_cont">
-                <div id="spec_01">
-                    <img class="img-responsive vessel" src="images/halifax.svg" alt="Halifax frigate">
-                    <h3 class="article-title narrow">halifax class</h3>
-                    <p class="article-subtitle narrow">multi-role patrol frigate (ffh)</p>
-                    <div class="table">
-                        <div class="data-row">
-                            <span>
-                                <data class="data-title narrow">Stasndard Displacement</data>
-                                <data class="data-value narrow">4,770 t</data>
-                            </span>
-                            <span>
-                                <data class="data-title narrow">Length</data>
-                                <data class="data-value narrow">134.1 m</data>
-                            </span>
-                        </div>
-                        <div class="data-row">
-                            <span>
-                                <data class="data-title narrow">Beam</data>
-                                <data class="data-value narrow">16.4 m</data>
-                            </span>
-                            <span>
-                                <data class="data-title narrow">Complement</data>
-                                <data class="data-value narrow">225 pers.</data>
-                            </span>
-                        </div>
-                        <div class="data-row">
-                            <data class="data-title narrow">Armament</data>
-                            <data class="data-value narrow">Phalanx 20mm CIWS, ESSM SAMs, Bofors 57 mm gun, Harpoon SSMs, twin KM 46 torpedo tubes, heavy (.50 cal) machine guns</data>
-                        </div>
-                    </div>
-                </div>
-            </article>
-
-            <article>
-               <img class="img-responsive vessel" src="images/victoria.svg" alt="Victoria submarine">
-                <h3 class="article-title narrow">victoria class</h3>
-                <p class="article-subtitle narrow">long-range patrol submarine (ssk)</p>
+            <article ng-repeat="article in articles">
+                <img class="img-responsive vessel" src="images/{{article.img}}.svg" alt="{{article.img}}">
+                <h3 class="article-title narrow">{{article.title}} class</h3>
+                <p class="article-subtitle narrow">{{article.subtitle}}</p>
                 <div class="table">
                     <div class="data-row">
                         <span>
                             <data class="data-title narrow">Stasndard Displacement</data>
-                            <data class="data-value narrow">2,400 t</data>
+                            <data class="data-value narrow">{{article.tonnes}} t</data>
                         </span>
                         <span>
                             <data class="data-title narrow">Length</data>
-                            <data class="data-value narrow">70.26 m</data>
+                            <data class="data-value narrow">{{article.length}} m</data>
                         </span>
                     </div>
                     <div class="data-row">
                         <span>
                             <data class="data-title narrow">Beam</data>
-                            <data class="data-value narrow">7.6 m</data>
+                            <data class="data-value narrow">{{article.beam}} m</data>
                         </span>
                         <span>
                             <data class="data-title narrow">Complement</data>
-                            <data class="data-value narrow">48 pers.</data>
+                            <data class="data-value narrow">{{article.pers}} pers.</data>
                         </span>
                     </div>
                     <div class="data-row">
                         <data class="data-title narrow">Armament</data>
-                        <data class="data-value narrow">Mk 48 Heavyweight torpedoes</data>
-                    </div>
-                </div>
-            </article>
-
-            <article>
-                <img class="img-responsive vessel" src="images/kingston.svg" alt="Kingston vessel">
-                <h3 class="article-title narrow">kingston class</h3>
-                <p class="article-subtitle narrow">maritime coastal defence vessel (mm)</p>
-                <div class="table">
-                    <div class="data-row">
-                        <span>
-                            <data class="data-title narrow">Stasndard Displacement</data>
-                            <data class="data-value narrow">970 t</data>
-                        </span>
-                        <span>
-                            <data class="data-title narrow">Length</data>
-                            <data class="data-value narrow">55.3 m</data>
-                        </span>
-                    </div>
-                    <div class="data-row">
-                        <span>
-                            <data class="data-title narrow">Beam</data>
-                            <data class="data-value narrow">11.3 m</data>
-                        </span>
-                        <span>
-                            <data class="data-title narrow">Complement</data>
-                            <data class="data-value narrow">37 pers.</data>
-                        </span>
-                    </div>
-                    <div class="data-row">
-                        <data class="data-title narrow">Armament</data>
-                        <data class="data-value narrow">NRWS (sea trials), heavy (.50 cal) machine guns</data>
-                    </div>
-                </div>
-            </article>
-
-            <article>
-                <img class="img-responsive vessel" src="images/orca.svg" alt="Orca vessel">
-                <h3 class="article-title narrow">orca</h3>
-                <p class="article-subtitle narrow">patrol craft training vessel (pct)</p>
-                <div class="table">
-                    <div class="data-row">
-                        <span>
-                            <data class="data-title narrow">Stasndard Displacement</data>
-                            <data class="data-value narrow">210 t</data>
-                        </span>
-                        <span>
-                            <data class="data-title narrow">Length</data>
-                            <data class="data-value narrow">33 m</data>
-                        </span>
-                    </div>
-                    <div class="data-row">
-                        <span>
-                            <data class="data-title narrow">Beam</data>
-                            <data class="data-value narrow">8.6 m</data>
-                        </span>
-                        <span>
-                            <data class="data-title narrow">Complement</data>
-                            <data class="data-value narrow">25 pers.</data>
-                        </span>
-                    </div>
-                    <div class="data-row">
-                        <data class="data-title narrow">Armament</data>
-                        <data class="data-value narrow">Heavy (.50 cal) machine guns</data>
+                        <data class="data-value narrow">{{article.armament}}</data>
                     </div>
                 </div>
             </article>
@@ -298,5 +199,7 @@
             <img class="footer-logo" src="images/canada-logo.png" alt="Canada">
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
