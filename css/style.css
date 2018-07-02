@@ -253,7 +253,7 @@ footer {
         font-size: 1.5em;
         grid-column: 2/3;
         display: grid;
-        grid-gap: 2em 1em;
+        grid-gap: .5em;
         grid-template-columns: 1fr;
     }
     .hero,
