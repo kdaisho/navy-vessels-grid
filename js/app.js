@@ -13,3 +13,9 @@ app.controller('asideCtrl', ['$scope', function($scope) {
         {title: 'iaor', subtitle: 'interim auxiliary oiler replenishment ship (mv)', img: 'iaor', tonnes: 26000, length: 183, beam: 25, pers: 150, armament: 'Heavy (.50 cal) machine guns and small arms for use exclusively by embarked RCN mission specialists.'}
     ];
 }]);
+
+app.controller('mainCtrl', ['$scope', function($scope) {
+    $scope.toggleModal = function() {
+
+    };
+}]);
