@@ -129,6 +129,78 @@ article {
     font-size: .75em;
     text-transform: uppercase;
 }
+#modal .article-title {
+    font-size: 1.25em;
+}
+#modal .article-subtitle {
+    font-size: .9em;
+}
+.table {
+    display: grid;
+    grid-gap: .25em;
+    padding: .5em 0;
+}
+.data-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+data {
+    font-size: .7em;
+}
+#modal data {
+    font-size: 1em;
+}
+.data-row {
+    grid-gap: .25em;
+    grid-template-columns: 1fr;
+}
+.data-row span {
+    border-bottom: 1px solid #999;
+    display: grid;
+    grid-gap: .25em;
+    padding-bottom: .25em;
+    grid-template-columns: 1fr 1fr;
+}
+.data-row:last-child {
+    grid-template-columns: 1fr 3fr;
+    padding-bottom: .5em;
+}
+.data-title {
+    font-weight: bold;
+}
+.table {
+    display: grid;
+    grid-gap: .25em;
+    padding: .5em 0;
+}
+.data-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+data {
+    font-size: .7em;
+}
+#modal data {
+    font-size: 1em;
+}
+.data-row {
+    grid-gap: .25em;
+    grid-template-columns: 1fr;
+}
+.data-row span {
+    border-bottom: 1px solid #999;
+    display: grid;
+    grid-gap: .25em;
+    padding-bottom: .25em;
+    grid-template-columns: 1fr 1fr;
+}
+.data-row:last-child {
+    grid-template-columns: 1fr 3fr;
+    padding-bottom: .5em;
+}
+.data-title {
+    font-weight: bold;
+}
 /* ---- Main ---- */
 main {
     grid-column: 2/3;
@@ -240,36 +312,6 @@ footer {
     top: 2%;
     right: 2%;
     z-index: 30;
-}
-.table {
-    display: grid;
-    grid-gap: .25em;
-    padding: .5em 0;
-}
-.data-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-data {
-    font-size: .7em;
-}
-.data-row {
-    grid-gap: .25em;
-    grid-template-columns: 1fr;
-}
-.data-row span {
-    border-bottom: 1px solid #999;
-    display: grid;
-    grid-gap: .25em;
-    padding-bottom: .25em;
-    grid-template-columns: 1fr 1fr;
-}
-.data-row:last-child {
-    grid-template-columns: 1fr 3fr;
-    padding-bottom: .5em;
-}
-.data-title {
-    font-weight: bold;
 }
 @media (min-width: 768px) {
     .wrapper {
