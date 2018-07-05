@@ -113,7 +113,7 @@ article {
 .vessel {
     padding: 1em 0 .5em;
 }
-.article-title {
+.vessel-title {
     background: #0516b0;
     color: #fff;
     padding: .25em 0 .25em .5em;
@@ -121,7 +121,7 @@ article {
     font-weight: bold;
     text-transform: uppercase;
 }
-.article-subtitle {
+.vessel-subtitle {
     background: #fff;
     border: 2px solid #0516b0;
     border-top: none;
@@ -129,10 +129,10 @@ article {
     font-size: .75em;
     text-transform: uppercase;
 }
-#modal .article-title {
+#modal .vessel-title {
     font-size: 1.25em;
 }
-#modal .article-subtitle {
+#modal .vessel-subtitle {
     font-size: .9em;
 }
 .table {
